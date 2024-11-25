@@ -2,7 +2,6 @@ package br.com.daguer.MedLink.model;
 
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -13,10 +12,16 @@ import java.time.LocalDateTime;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "tab_appointments")
 public class Appointment {
+
+    public Appointment(Patient patient, Doctor doctor, Status status, LocalDateTime data) {
+        this.patient = patient;
+        this.doctor = doctor;
+        this.status = status;
+        this.data = data;
+    }
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

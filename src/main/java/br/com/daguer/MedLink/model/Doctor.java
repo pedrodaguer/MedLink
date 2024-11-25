@@ -2,6 +2,7 @@ package br.com.daguer.MedLink.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 import lombok.*;
 
 @Getter
@@ -16,8 +17,8 @@ public class Doctor extends User {
     }
 
     @Column
-    private String crm;
+    private String Crm;
     @Column
-    private String specialty;
+    private String Specialty;
 
 }
